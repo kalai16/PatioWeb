@@ -1,10 +1,18 @@
 var express = require('express');
 var app = express();
+var mongodb = require('mongodb');
+
+// work with "MongoClient" interface to connect to mongodb server
+var MongoClient = mongodb.MongoClient;
+
+// connection url, where our mongodb server is running
+// var url = 'mongodb://Zirai Studio:ZiraI1337@ds153669.mlab.com:53669/patio';
+// FUCK THIS SHIT IM LEAVING THIS OUT
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
 
-var port = process.env.PORT || 1337;
+var port = process.env.PORT || 5000;
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
